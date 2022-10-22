@@ -310,35 +310,40 @@ th,td {
 }
 
 tbody tr {
-    border-bottom: 1px solid #95d2eb;
+    border-bottom: 1px solid #888b8d;
     text-align: center;
 
 }
 
+.header {
+  overflow: hidden;
+  background-color: rgb(141, 176, 245);
+  padding: 10px 5px;
+}
+
 </style>
 
-<div class="content" role="main">
+<div class="header">
+  <h2>STOCK MARKET APPLICATION</h2>
+    </div>
+  
 
+<div class="content" role="main">
   <!-- Highlight Card -->
-  <div class="card highlight-card card-small">
+  <!-- <div class="card highlight-card card-small">
 
     <span>{{ stocktitle }} app is running!</span>
 
-  </div>
+  </div> -->
 
-<div class="col-lg-6">
-  <!-- <select name="Company" class="form-control">
-    <option>Select company</option>
-    <option [value]="company.companyName" *ngFor="let company of companies" >{{company.companyName}}</option>
-  </select> -->
-<!-- //trial -->
+<div class="col-md-6">
 <select class="form-control" id="companyName" placeholder="companyName" name="companyName"  [(ngModel)]="companyName">                               
   <option value="0" disabled> Select Company </option>
   <option [value]="company.companyCode" *ngFor="let company of companies" >{{company.companyName}}</option>
   </select>
 <input type="date"  name="sDate" [(ngModel)]="sDate">
 <input type="date"  name="eDate" [(ngModel)]="eDate">
-<button (click)="getStockDetails()" class="btn btn-primary btn-block btn-lg">Search</button>
+<button (click)="getStockDetails()" class="btn btn-primary btn-block">Search</button>
 
 </div>
 
